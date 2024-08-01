@@ -52,6 +52,10 @@ do {
     Math.ceil(2.1); // Returns 3
     Math.max(1, 2, 3); // Returns 3
 
+    function getRandomInt(max) {
+        return Math.floor(Math.random() * max);
+    }
+
 
 ### Date
 
@@ -90,11 +94,21 @@ Extracting a portion of an array:
     const str = "Hello, World!";
     const world = str.slice(7); // "World!"
 
+    const word = "Javascript"
+    word.slice(1) // avascript
+    word.substring(1) // avascript
+
 ## Join Method
 The join method is a useful array method in JavaScript. It's used to concatenate all elements of an array into a single string.
 
     const arr = ['Hello', 'World'];
     const str = arr.join(' '); // "Hello World"
+
+## substring Method
+
+    let formatted = "1234567890"
+    `(${formatted.substring(0, 3)}) ${formatted.substring(3,6 )}-${formatted.substring(6)}`
+    // (123) 456-7890
 
 ## Reverse Method
 The reverse method is an array method in JavaScript that reverses the order of elements in an array in place.
@@ -111,7 +125,8 @@ The reverse method is an array method in JavaScript that reverses the order of e
 ^: The caret symbol inside the brackets [^...] means "not" or "negation".
 \w: This matches any word character (alphanumeric characters and underscore). Specifically, it matches [a-zA-Z0-9_].
 \s: This matches any whitespace character (spaces, tabs, and line breaks).
-[^\w\s]: Combined, this pattern matches any character that is not a word character or a whitespace character.
+"[^\w\s]" 
+Combined, this pattern matches any character that is not a word character or a whitespace character.
 g: The global flag, meaning that the pattern should be applied to all matches in the string, not just the first one.
 
 .split(/\s+/): Splits the cleaned string into an array of words, using one or more whitespace characters as the separator. This ensures that multiple spaces between words do not result in empty strings in the array.
@@ -124,8 +139,8 @@ g: The global flag, meaning that the pattern should be applied to all matches in
 ## Set method
 // The Set object lets you store unique values of any type, whether primitive values or object references.
 
-const arr = [1, 2, 1, 1, 1, 1, 1, 1, 1, 1];
-newSet = new Set(arr); // {1, 2}
+    const arr = [1, 2, 1, 1, 1, 1, 1, 1, 1, 1];
+    newSet = new Set(arr); // {1, 2}
 
 
 ## Convert any set to array 
@@ -134,3 +149,80 @@ Array.from()
 
     const arr = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1];
     Array.from(new Set(arr)); // [1]
+
+## Reduce method : 
+    const arr = [1, 2, 3, 4, 5];
+    let actualSum = arr.reduce((sum, num) => sum + num, 0);
+
+## Formulas: 
+
+    to find the sum of n inclusive numbers
+
+    'n(n+1)/2'
+
+    where n is the length of the array + 1
+
+so for example: 
+    let arr = [1,2,3,4,5]
+    let n = arr.length + 1
+    let sum = n * (n + 1) / 2
+    console.log(sum) // 15 
+**Check Find missing number for reference and use case.**
+
+
+## indexOf method :
+
+To get the index of something from a array.
+
+    let arr = ["a", "b", "c"];
+    arr.indexOf("b") // 1
+
+
+## charCodeAt(0) 
+
+its a method which gives us the character code of a character. 
+
+    let arr = ['X', 'Z'];
+    let start = arr[0].charCodeAt(0); // 88 is the character code of X.
+
+
+Always remeber this : 
+
+1. lowercase letters range character code :  97 to 122
+2. upperCase letters range character code:  65 to 90.
+
+## String.fromCharCode(88)
+
+Convert the char code to a letter.
+
+    
+    String.fromCharCode(88);  // X is the string converted from character code 88.
+## ParseFloat : Converts a string to a floating-point number.
+
+    // Return the total sales amount with tax rounded to 2 decimal places
+    return parseFloat(totalSalesWithTax.toFixed(2));  // 100.00
+
+## Parse Int :  Converts a strig to a integer
+    const num = "024";
+    parseInt(num) // 24;
+
+    parseInt("a") // NaN (not a number)
+
+    let val =  parseInt("a")
+     
+    if(val){
+         console.log("the input is number ")    
+     }else{
+           console.log("the input is string ")
+     }
+
+## string manipulation methods 
+
+    trim()
+    split()
+    join()
+
+## isNan : Returns a Boolean value that indicates whether a value is the reserved value NaN (not a number).
+
+    isNaN('a') // true
+    isNaN(1) // false
