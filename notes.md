@@ -156,11 +156,8 @@ Array.from()
 
 ## Formulas: 
 
-    to find the sum of n inclusive numbers
-
-    'n(n+1)/2'
-
-    where n is the length of the array + 1
+1. To find the sum of n inclusive numbers
+  'n(n+1)/2', where n is the length of the array + 1
 
 so for example: 
     let arr = [1,2,3,4,5]
@@ -168,6 +165,15 @@ so for example:
     let sum = n * (n + 1) / 2
     console.log(sum) // 15 
 **Check Find missing number for reference and use case.**
+
+2. Fibonnacci sequence formula : f(n) = f(n-1) + f(n-2). Where f is the function call and n is the number is the index number of who we want to get the value. So for example. Get 5th index value of fibonnacci sequence 
+
+- F(n) is the number in the sequence.
+- F(n-1) is the number before it.
+- F(n-2) is the number before that.
+
+    `F(5) = 3 + 2 = 5`
+So the 5th number in the sequence is 5.
 
 
 ## indexOf method :
