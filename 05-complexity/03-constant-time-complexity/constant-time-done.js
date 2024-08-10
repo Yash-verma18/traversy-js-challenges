@@ -15,6 +15,6 @@ console.timeEnd('Access Element 1');
 
 const arr2 = Array.from({ length: 10000 }, (_, index) => index + 1);
 
-console.time('Access Element 2');
-console.log(accessElement(arr2, 1));
-console.timeEnd('Access Element 2');
+console.time('Access Element 100');
+console.log(accessElement(arr2, 100));
+console.timeEnd('Access Element 100');
