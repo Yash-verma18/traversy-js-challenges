@@ -2,6 +2,7 @@ class HashTable {
   constructor(limit = 14) {
     this.storage = [];
     this.limit = limit;
+    this.values = [];
   }
 
   _hash(key, max) {
@@ -82,6 +83,18 @@ class HashTable {
     return false;
   }
 
+  getValues() {
+    if (this.storage.length != 0) {
+      for (let i = 0; i < this.storage.length; i++) {
+        if (this.storage[i] != undefined) {
+          for (let j = 0; j < this.storage[i].length; j++) {
+            this.values.push(this.storage[i][j][1]);
+          }
+        }
+      }
+    }
+    return this.values;
+  }
   printTable() {
     for (let i = 0; i < this.storage.length; i++) {
       if (this.storage[i] !== undefined) {
@@ -96,7 +109,7 @@ class HashTable {
     this.storage = [];
   }
 
- // ADD getValues() METHOD
+  // ADD getValues() METHOD
 }
 
 module.exports = HashTable;

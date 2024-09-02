@@ -119,6 +119,7 @@ The reverse method is an array method in JavaScript that reverses the order of e
 ## Regex patterns
 
 .replace(/[^\w\s]/g, ''): Removes special characters, leaving only word characters and whitespace.****
+.replace(/[^a-zA-z\s]/g, ''): Removes special characters, leaving only word characters and whitespace.****
 
 /[^\w\s]/g: This is a regular expression pattern.
 /.../: The pattern is enclosed in slashes.
